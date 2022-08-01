@@ -22,14 +22,16 @@ Para detener el proxy utilizar el siguiente comando **sudo nginx -s stop**
 
 ##### Levantar servidor Modo Fork puerto 8080
 
-PORT=8080 pm2 start src/server.js --name="Servidor1" --watch
+`PORT=8080 pm2 start src/server.js --name="Servidor1" --watch`
+
 **aclaracion**: (--) son 2 guiones medios
 
 ---
 
 ##### Levantar servidor Modo Cluster puerto 8081
 
-PORT=8081 pm2 start src/server.js --name="Servidor2" --watch -i max
+`PORT=8081 pm2 start src/server.js --name="Servidor2" --watch -i max`
+
 **aclaracion**: (--) son 2 guiones medios
 
 Para ver los servidores creados utilizar el comando `pm2 list` en terminal
@@ -45,11 +47,11 @@ Modificar el archivo **nginx.conf** con las configuraciones que estan en el arch
 
 ##### Levantar Servidores:
 
-- Modo Fork : PORT=8080 pm2 start src/server.js --name="servidor1" --watch
-- Modo Cluster : PORT=8082 pm2 start src/server.js --name="servidor2" --watch -i 1
-- Modo Cluster : PORT=8083 pm2 start src/server.js --name="servidor3" --watch -i 1
-- Modo Cluster : PORT=8084 pm2 start src/server.js --name="servidor4" --watch -i 1
-- Modo Cluster : PORT=8085 pm2 start src/server.js --name="servidor5" --watch -i 1
+- Modo Fork : `PORT=8080 pm2 start src/server.js --name="servidor1" --watch`
+- Modo Cluster : `PORT=8082 pm2 start src/server.js --name="servidor2" --watch -i 1`
+- Modo Cluster : `PORT=8083 pm2 start src/server.js --name="servidor3" --watch -i 1`
+- Modo Cluster : `PORT=8084 pm2 start src/server.js --name="servidor4" --watch -i 1`
+- Modo Cluster : `PORT=8085 pm2 start src/server.js --name="servidor5" --watch -i 1`
 
 **Levantar Proxy Nginx con el siguiente comando `sudo nginx` **
 
@@ -59,4 +61,4 @@ Podemos ver los servidores con el comando `pm2 list` y ver las peticiones realiz
 
 ####Importante
 
-Todos los comandos fueron probados con terminal de Ubuntu
+Todos los comandos fueron probados con terminal de **Ubuntu**
