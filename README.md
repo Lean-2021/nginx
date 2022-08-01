@@ -53,12 +53,12 @@ Modificar el archivo **nginx.conf** con las configuraciones que estan en el arch
 - Modo Cluster : `PORT=8084 pm2 start src/server.js --name="servidor4" --watch -i 1`
 - Modo Cluster : `PORT=8085 pm2 start src/server.js --name="servidor5" --watch -i 1`
 
-**Levantar Proxy Nginx con el siguiente comando `sudo nginx` **
+**Levantar Proxy Nginx con el siguiente comando** `sudo nginx`
 
-#####Probar funcionamiento con [localhost](http://localhost "localhost") y [localhost/datos](http://localhost/datos "localhost/datos")
+##### Probar funcionamiento con [localhost](http://localhost "localhost") y [localhost/datos](http://localhost/datos "localhost/datos")
 
 Podemos ver los servidores con el comando `pm2 list` y ver las peticiones realizadas a cada puerto de cada servidor con `pm2 monit`
 
-####Importante
+#### Importante
 
-Todos los comandos fueron probados con terminal de **Ubuntu**
+Todos los comandos fueron probados con terminal de **Ubuntu**, levantar los servidores desde la ruta raiz del proyecto
